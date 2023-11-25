@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Trigger";
+  src: url("../fonts/Trigger Demo.otf");
+}
+
+:root {
+  --primary-clr: 0, 0%, 0%;
+  --secondary-clr: 0, 0%, 100%;
+  --accent-clr: 359, 100%, 57%;
+  --primary-font: "Open Sans";
+  --secondary-font: "Trigger";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  padding: 1em 0;
+  position: relative;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.page-heading {
+  font-size: 2.5em;
+  font-family: var(--secondary-font);
+}
+
+.section-heading {
+  --clr: hsl(0, 0%, 0%);
+  color: var(--clr);
+  width: max-content;
+  margin: 1em auto;
+  font-size: 1.75em;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 5px;
+  border-radius: 100vh;
+  background-color: var(--clr);
+}
+
+.section-div {
+  width: 100%;
+  bottom: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.section-main {
+  display: flex;
+  height: 100%;
+}
+
+.section-main>* {
+  width: 100%;
+  height: 100%;
+}
+
+.section-img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-subheading {
+  text-align: center;
+  margin: 0.25em 0;
+  font-weight: 300;
+  font-size: 1.2em;
+}

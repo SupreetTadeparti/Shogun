@@ -1,0 +1,66 @@
+/* Nav.css */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  background-color: white;
+  position: relative;
+}
+
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-btn__line {
+  width: 30px;
+  height: 4px;
+  border-radius: 100vh;
+  background-color: black;
+  margin: 4px 0;
+}
+
+.nav__links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 3em;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 0 2em;
+    justify-content: space-between;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav__links {
+    justify-content: space-around;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    opacity: 0;
+    transform-origin: center top;
+    transform: scaleY(0);
+  }
+
+  .menu-open .nav__links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 10;
+    padding: 2em;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

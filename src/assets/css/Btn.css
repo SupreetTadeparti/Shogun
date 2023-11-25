@@ -1,0 +1,22 @@
+.btn {
+  --primary-clr: hsl(var(--accent-clr));
+  --text-clr: black;
+  --text-clr-hover: white;
+  background-color: unset;
+  width: max-content;
+  cursor: pointer;
+  color: var(--text-clr);
+  font-size: 1.05em;
+  outline-color: invert;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0.5em 1.2em;
+  border: 2px solid var(--primary-clr);
+  transition: background-color 250ms, color 250ms, box-shadow 250ms;
+}
+
+.btn:hover {
+  background-color: var(--primary-clr) !important;
+  color: var(--text-clr-hover);
+  box-shadow: 0 3px 5px 2px hsla(0, 10%, 20%, 0.25);
+}

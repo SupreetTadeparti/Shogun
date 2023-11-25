@@ -1,0 +1,14 @@
+.courses-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courses-container {
+  margin: 5em 0;
+  padding: 0 2em;
+  gap: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

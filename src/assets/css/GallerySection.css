@@ -1,0 +1,113 @@
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-section>.btn {
+  font-size: 1.2em;
+}
+
+.gallery {
+  margin: 2em 0;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 8em);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  border-radius: 0.75em;
+  overflow: hidden;
+}
+
+.gallery__img {
+  --transition-duration: 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--transition-duration) ease-out, box-shadow var(--transition-duration) ease-out;
+}
+
+.gallery__img:hover {
+  transform: translate3d(0, 0, 0) scale(1.02);
+  box-shadow: 0 0 5px 0 hsl(0 0% 0% / 50%);
+}
+
+.gallery__img>img {
+  transition: filter 150ms ease-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px) grayscale(0.75);
+  transition: filter var(--transition-duration) ease-out, transform var(--transition-duration) ease-out;
+}
+
+.gallery__img>img:hover {
+  filter: unset;
+  transform: scale(1.05);
+}
+
+.gallery__img:nth-child(1) {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.gallery__img:nth-child(2) {
+  grid-area: 2 / 3 / 4 / 5;
+}
+
+.gallery__img:nth-child(3) {
+  grid-area: 1 / 3 / 2 / 6;
+}
+
+.gallery__img:nth-child(4) {
+  grid-area: 2 / 5 / 5 / 6;
+}
+
+.gallery__img:nth-child(5) {
+  grid-area: 5 / 4 / 6 / 6;
+}
+
+.gallery__img:nth-child(6) {
+  grid-area: 4 / 3 / 6 / 4;
+}
+
+.gallery__img:nth-child(7) {
+  grid-area: 4 / 4 / 5 / 5;
+}
+
+.gallery__img:nth-child(8) {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.gallery__img:nth-child(9) {
+  grid-area: 4 / 1 / 6 / 3;
+}
+
+.gallery__img:nth-child(10) {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+@media screen and (max-width: 1000px) {
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .gallery__img {
+    max-width: 40%;
+  }
+
+  .gallery__img>img {
+    filter: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery__img {
+    max-width: 45%;
+  }
+}

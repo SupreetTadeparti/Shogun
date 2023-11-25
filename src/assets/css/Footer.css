@@ -1,0 +1,41 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25em;
+  height: 20em;
+  margin-top: 5em;
+  padding: 2em 0;
+  background-color: black;
+  color: white;
+}
+
+footer > .heading {
+  font-size: 1.5em;
+}
+
+footer > .desc {
+  color: #ddd;
+  max-width: 30%;
+  text-align: center;
+  font-weight: 300;
+}
+
+footer > .copyright {
+  font-weight: 300;
+  margin-top: auto;
+}
+
+.social {
+  display: flex;
+  gap: 0.5em;
+}
+
+.social__link {
+  display: grid;
+  place-items: center;
+}
+
+.social__link > img {
+  filter: invert(1);
+}

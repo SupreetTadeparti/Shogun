@@ -1,0 +1,47 @@
+.home-btn {
+  --transition-duration: 75ms;
+  --content: "Enroll";
+  --color: hsl(var(--accent-clr));
+  text-decoration: none;
+  width: max-content;
+  padding: 0.75em 1.75em;
+  margin: 1em 0;
+  border-radius: 0;
+  border: 0;
+  border: 2px solid var(--color);
+  color: white;
+  background-color: unset;
+  cursor: pointer;
+  font-size: 1.15em;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-duration) ease-out,
+    color var(--transition-duration) ease-out;
+}
+
+.home-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 200%;
+  background-color: var(--color);
+  transform: translate(-100%, -25%);
+  transition: transform var(--transition-duration) ease-out;
+  z-index: -1;
+}
+
+.home-btn:hover::before {
+  transform: translate(0%, -25%);
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
+  font-weight: 500;
+}
+
+/* Fix Later */
+.home-btn:nth-of-type(even):hover {
+  color: black;
+}

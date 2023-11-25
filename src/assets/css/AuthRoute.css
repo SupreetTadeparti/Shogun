@@ -1,0 +1,121 @@
+.auth-route-container {
+    width: min(max(25em, 60%), 95%);
+    border: 1px solid hsl(var(--accent-clr));
+    margin: auto;
+    margin-top: 2.5em;
+    margin-bottom: 7.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2.25em;
+}
+
+.auth-form__heading {
+    font-size: 2.5em;
+    font-family: var(--secondary-font);
+}
+
+.auth-form__error-msg {
+    color: hsl(var(--accent-clr));
+}
+
+.auth-form__input {
+    width: 100%;
+    padding: .5em;
+    font-size: 1em;
+}
+
+.auth-form__input:focus {
+    outline: none;
+}
+
+.auth-form__or {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #444;
+    margin: .25em 0;
+}
+
+.auth-form__or::before {
+    content: "or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 1em;
+    color: #444;
+    background-color: white;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+.auth-form__oauth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.auth-form__oauth-btn {
+    cursor: pointer;
+    width: 80%;
+    height: 3em;
+    padding: .5em .75em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid #333;
+    border-radius: 100vh;
+    background-color: #fff;
+    transition: box-shadow 150ms ease-out;
+}
+
+.auth-form__oauth-btn:hover {
+    box-shadow: 0 2px 5px 0 hsl(0 0% 0% / 20%);
+}
+
+.auth-form__oauth-btn>img {
+    height: 100%;
+}
+
+.form-message {
+    background-color: hsl(var(--accent-clr));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0 3em;
+    color: white;
+}
+
+.form-message__heading {
+    text-align: center;
+    font-size: 2.25em;
+    font-family: var(--secondary-font)
+}
+
+.form-message__text {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.remember-input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    color: hsl(0 0% 25%);
+}
+
+#remember-input {
+    width: 1.75em;
+    margin: 0;
+    background-color: hsl(var(--accent-clr));
+}

@@ -1,0 +1,139 @@
+.bmi-route-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 5em;
+    margin-bottom: 7.5em;
+}
+
+.bmi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: max(40%, 30em);
+    padding: 5em;
+}
+
+.bmi-form__heading {
+    font-size: 2.5em;
+    font-family: var(--secondary-font);
+    margin: 0;
+}
+
+.bmi-form__input {
+    border: 1px solid hsl(var(--accent-clr));
+    font-size: 1.2em;
+    padding: .5em;
+    width: 100%;
+}
+
+.bmi-form__input:focus {
+    outline: none;
+}
+
+.result-container {
+    width: max(30%, 20em);
+    border: 2px solid hsl(var(--accent-clr));
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result__heading {
+    text-align: center;
+    font-size: 2.25em;
+    font-family: var(--secondary-font);
+}
+
+.result__bmi {
+    font-size: 2.25em;
+    font-weight: bold;
+}
+
+.result__category {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.result__illustration {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    width: 80%;
+    height: 3em;
+    border: 2px solid hsl(var(--accent-clr));
+}
+
+.result__milestone.under {
+    --x: 13.9;
+}
+
+.result__milestone.normal {
+    --x: 18.5;
+}
+
+.result__milestone.over {
+    --x: 25
+}
+
+.result__milestone.obese {
+    --x: 30
+}
+
+.result__milestone.end {
+    --x: 40;
+}
+
+.result__milestone.user {
+    font-weight: bold;
+    top: unset;
+    bottom: 100%;
+}
+
+.result__milestone {
+    position: absolute;
+    top: 100%;
+    left: calc(100% * (var(--x) - 14) / 26);
+    transform: translate(-50%);
+}
+
+.result__milestone::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    height: calc(3em - 2px);
+    width: 1px;
+    background-color: black;
+    left: 50%;
+    z-index: -1;
+}
+
+.result__milestone.user::before {
+    bottom: unset;
+    top: 100%;
+    width: 3px;
+}
+
+.result__categories {
+    width: 80%;
+}
+
+.result__categories__category {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.result__category__name {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+    .bmi-route-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+}
