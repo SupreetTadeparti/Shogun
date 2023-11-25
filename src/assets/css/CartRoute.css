@@ -49,3 +49,25 @@
     font-family: var(--secondary-font);
     color: hsl(0 0% 60%);
 }
+
+@media screen and (max-width: 1250px) {
+    .cart-route-container {
+        padding: 0 2.5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .cart-main {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        width: 100%;
+        padding: 5em 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .cart-route-container {
+        padding: 0 1em;
+    }
+}

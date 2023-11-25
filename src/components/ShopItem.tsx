@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import redStar from "../assets/img/redstar.png";
 import Btn from "../components/Btn";
+import "../assets/css/ShopItem.css";
 
 type ShopItemProps = {
   id: string;
