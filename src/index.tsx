@@ -11,6 +11,9 @@ import ErrorPage from "./routes/ErrorPage";
 import ShopRoute from "./routes/ShopRoute";
 import CartRoute from "./routes/CartRoute";
 import AccountRoute from "./routes/AccountRoute";
+import Banner from "./components/Banner";
+import WatchRoute from "./routes/WatchRoute";
+import LogoutRoute from "./routes/LogoutRoute";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
     element: <AuthRoute />,
   },
   {
+    path: "/account",
+    element: <AccountRoute />,
+  },
+  {
+    path: "/logout",
+    element: <LogoutRoute />,
+  },
+  {
     path: "/shop",
     element: <ShopRoute />,
   },
@@ -34,8 +45,8 @@ const router = createBrowserRouter([
     element: <CartRoute />,
   },
   {
-    path: "/account",
-    element: <AccountRoute />,
+    path: "/watch/:id",
+    element: <WatchRoute />,
   },
   {
     path: "*",
@@ -45,6 +56,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
+    <Banner />
     <Nav />
     <RouterProvider router={router} />
     <Footer />

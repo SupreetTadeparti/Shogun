@@ -1,0 +1,39 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 35em;
+}
+
+.video {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.watch-route-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.watch-route-container .page-heading {
+    margin: 2em 0;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15em;
+}
+
+.course-info>.heading {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.about {
+    text-indent: 4em;
+    text-rendering: optimizeLegibility;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
